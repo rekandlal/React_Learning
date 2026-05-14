@@ -1,7 +1,7 @@
 import Card from "./components/Card"
 
 // important image here from assets folder
-import icon from "./assets/save.png";
+import icon from "./assets/bookmark.png";
 import google from "./assets/google.png";
 import figma from "./assets/figma.png";
 import apple from "./assets/apple.png";
@@ -84,8 +84,8 @@ function App() {
   return (
     <div className="parent">
       
-      {jobs.map( (job) => (
-        <Card profile={job.profile} companyName={job.companyName} days={job.days} tag={job.tag} option1={job.option1} option2={job.option2} salary={job.salary} location={job.location} save={job.save}/>
+      {jobs.map( (job, index) => (
+        <Card key={index} profile={job.profile} companyName={job.companyName} days={job.days} tag={job.tag} option1={job.option1} option2={job.option2} salary={job.salary} location={job.location} save={job.save}/>
       ))}
 
     </div>

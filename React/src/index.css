@@ -79,10 +79,10 @@ body{
   object-fit: cover;
 }
 
-.save{
+.save {
   margin-top: -28px;
-  width: 60px;
-  height: 25px;
+  width: 66px;
+  height: 27px;
 
   background-color: #EDEDED;
   border-radius: 5px;
@@ -92,18 +92,42 @@ body{
   justify-content: center;
   align-items: center;
   gap: 5px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
-.save h3{
+/* hover only (no big jump on click) */
+.save:hover {
+  transform: scale(1.04);
+}
+
+
+
+/* text */
+.save h3 {
   font-size: 13px;
   font-weight: 500;
-  color: gray;
-  cursor: pointer;
+  color: black;
+  transition: color 0.3s ease;
 }
 
-.save-icon{
-   width: 14px;
-   height: 14px;
+.save-icon {
+  width: 14px;
+  height: 14px;
+  transition: all 0.2s ease;
+}
+
+.save-icon.active {
+  filter: invert(1) sepia(1) saturate(10000%) brightness(0);
+}
+
+/* optional: when saved, change text color */
+.save.saved h3 {
+  color: black;
 }
 
 /* Middle */

@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 
 function Card({
   profile,
@@ -11,6 +11,15 @@ function Card({
   location,
   save
 }) {
+
+
+  const [isSaved, setIsSaved] = useState(false);
+
+  const handleSave = () => {
+    setIsSaved(!isSaved);
+  };
+
+
   return (
     <div className="card">
 
@@ -25,12 +34,13 @@ function Card({
         />
         </div>
 
-        <div className="save">
-          <h3>Save</h3>
+        <div className="save" onClick={handleSave}>
+          <h3>{isSaved ? "Saved" : "Save"}</h3>
+
           <img
             src={save}
             alt="save icon"
-            className="save-icon"
+            className={`save-icon ${isSaved ? "active" : ""}`}
           />
         </div>
 
