@@ -1,0 +1,13 @@
+.btn {
+  background-color: bisque;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
