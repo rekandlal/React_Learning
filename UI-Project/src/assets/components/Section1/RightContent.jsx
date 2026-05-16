@@ -3,7 +3,7 @@ import RightCard from './RightCard'
 
 const RightContent = (props) => {
   return (
-    <div className='h-full p-2 w-2/3 overflow-x-auto mb-20 flex flex-nowrap gap-10'>
+    <div className='h-full p-2 w-2/3  hide-scrollbar overflow-x-scroll mb-20 flex flex-nowrap gap-10'>
         {props.users?.map((elem, index) => (
             <RightCard
                 key={index}
